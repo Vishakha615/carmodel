@@ -5,7 +5,22 @@ import pickle
 
 st.title("Car Price Prediction App")
 import streamlit as st
+st.markdown("""
+<style>
+.stButton > button {
+    background-color: #7C3AED;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+}
 
+.stButton > button:hover {
+    background-color: #6D28D9;
+    color: white;
+}
+</style>
+""", unsafe_allow_html=True)
 st.markdown("""
 <style>
 .stApp {
