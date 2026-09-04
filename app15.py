@@ -4,7 +4,15 @@ import pandas as pd
 import pickle
 
 st.title("Car Price Prediction App")
+import streamlit as st
 
+st.markdown("""
+<style>
+.stApp {
+    background-color: #EAF4FF;
+}
+</style>
+""", unsafe_allow_html=True)
 pipe = pickle.load(open("final_file.pkl", "rb+"))
 df = pd.read_csv("Cleaned_data.csv")
 companies = sorted(df["company"].unique())
