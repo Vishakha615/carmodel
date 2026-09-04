@@ -13,6 +13,25 @@ st.markdown("""
 }
 </style>
 """, unsafe_allow_html=True)
+
+
+import streamlit as st
+
+st.markdown("""
+<style>
+
+/* Main background */
+.stApp {
+    background-color: #F3E8FF;
+}
+
+/* Sidebar background */
+[data-testid="stSidebar"] {
+    background-color: #E9D5FF;
+}
+
+</style>
+""", unsafe_allow_html=True)
 pipe = pickle.load(open("final_file.pkl", "rb+"))
 df = pd.read_csv("Cleaned_data.csv")
 companies = sorted(df["company"].unique())
